@@ -1,7 +1,5 @@
 {
     "variables": {
-     #   "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
-     #   "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}"
         "aws_access_key": "AKIA3XBJG7TN4J4LPGFE",
         "aws_secret_key": "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"
     },
