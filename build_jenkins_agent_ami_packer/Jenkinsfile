@@ -14,7 +14,7 @@ pipeline {
 
         git branch: "main",
         // create keygen in the ami to git clone
-          url: 'git@github.com:spinningops/JenkinsCI.git'
+          url: 'https://github.com/Shi191099/JenkinsCI-Packer.git'
       }
     }
 
