@@ -1,10 +1,5 @@
 pipeline {
 
-  environment {
-    registry = ""
-    dockerImage = ""
-  }
-
   agent { label 'jenkins-agent-ec2-fulladmin' }
 
   stages {
