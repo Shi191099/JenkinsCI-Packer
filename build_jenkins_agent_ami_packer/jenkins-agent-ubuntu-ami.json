@@ -1,7 +1,9 @@
 {
     "variables": {
-        "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
-        "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}"
+     #   "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+     #   "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}"
+        "aws_access_key": "AKIA3XBJG7TN4J4LPGFE",
+        "aws_secret_key": "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"
     },
     "builders": [
         {
@@ -10,7 +12,7 @@
             "instance_type": "c5.xlarge",
             "region": "us-east-1",
             "secret_key": "{{user `aws_secret_key`}}",
-            "security_group_ids":"sg-08203685e22bb1651,sg-06de0cfe963146be6",
+            "security_group_ids":"sg-08143204bc18dd48a,sg-04655bf57f8bff3c4",
             "associate_public_ip_address":"true",
             "source_ami_filter": {
               "filters": {
