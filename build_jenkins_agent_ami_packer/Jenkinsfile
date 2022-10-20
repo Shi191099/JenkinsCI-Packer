@@ -1,5 +1,5 @@
 pipeline {
-//  agent { label 'jenkins-agent-ec2-fulladmin' }
+  agent { label 'jenkins-agent-ec2-fulladmin' }
   stages {
     stage('Checkout Source') {
       steps {
