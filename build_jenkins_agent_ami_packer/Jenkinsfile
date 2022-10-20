@@ -1,22 +1,16 @@
 pipeline {
-
   agent { label 'jenkins-agent-ec2-fulladmin' }
-
   stages {
-
     stage('Checkout Source') {
       steps {
-
         git branch: "main",
         // create keygen in the ami to git clone
           url: 'https://github.com/Shi191099/JenkinsCI-Packer.git'
       }
     }
-
     stage('Install Packer') {
       steps {
         script {
-
           sh'''#!/bin/bash 
                         curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
                         sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
@@ -25,29 +19,23 @@ pipeline {
         }
       }
     }
-
-    stage('packer validate') {
-      steps {
-        script {
-
-          sh'''#!/bin/bash 
-                        packer validate build_jenkins_agent_ami_packer/jenkins-agent-ubuntu-ami.json
-                    '''
-        }
-      }
-    }
-
-    stage('packer build') {
-      steps {
-        script {
-
-          sh'''#!/bin/bash 
-                        packer build build_jenkins_agent_ami_packer/jenkins-agent-ubuntu-ami.json
-                    '''
-        }
-      }
-    }
-
+//     stage('packer validate') {
+//       steps {
+//         script {
+//           sh'''#!/bin/bash 
+//                         packer validate build_jenkins_agent_ami_packer/jenkins-agent-ubuntu-ami.json
+//                     '''
+//         }
+//       }
+//     }
+//     stage('packer build') {
+//       steps {
+//         script {
+//           sh'''#!/bin/bash 
+//                         packer build build_jenkins_agent_ami_packer/jenkins-agent-ubuntu-ami.json
+//                     '''
+//         }
+//       }
+//     }
   }
-
 }
